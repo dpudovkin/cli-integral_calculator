@@ -1,10 +1,11 @@
 package main
 
 import (
-	calculation "concurrency_calculation/integral/controller"
 	"fmt"
 	"strconv"
 	"time"
+
+	calculation "github.com/p134d/cli-integral_calculator/controller"
 
 	"github.com/thatisuday/commando"
 )

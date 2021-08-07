@@ -1,4 +1,4 @@
-module concurrency_calculation/integral
+module github.com/p134d/cli-integral_calculator
 
 go 1.16
 
