@@ -56,7 +56,7 @@ func integrateAction(args map[string]commando.ArgValue, flags map[string]command
 	}
 	b, err = strconv.ParseFloat(args["b"].Value, 64)
 	delta, err = strconv.ParseFloat(args["delta"].Value, 64)
-	fmt.Println("Result: ", calculation.Concurrency_calculate(a, b, delta, f))
+	fmt.Println("\nResult: ", calculation.Concurrency_calculate(a, b, delta, f))
 }
 
 func concurrency_test(a, b, delta float64, f func(float64) float64) {

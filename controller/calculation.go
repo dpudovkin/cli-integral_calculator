@@ -3,6 +3,7 @@ package calculation
 import (
 	"fmt"
 	"math"
+	"runtime"
 	"sync"
 
 	"github.com/Knetic/govaluate"
@@ -18,7 +19,9 @@ func Calculate(a, b, delta float64, f func(float64) float64) float64 {
 
 func Concurrency_calculate(a, b, delta float64, f func(float64) float64) float64 {
 	var result float64
-	var cpu_num int = 4
+	var cpu_num int = runtime.NumCPU()
+
+	runtime.GOMAXPROCS(cpu_num)
 
 	wg := &sync.WaitGroup{}
 	wg.Add(cpu_num)
